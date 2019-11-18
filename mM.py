@@ -1,9 +1,14 @@
 #Made by Jonnelafin, more info at jonnelafin.github.io
 #Direct contact: elias.eskelinen@protonmail.com
 
+extraout = False
+noout = False
+
 def err(msg):
 	print("ERROR: " + msg)
 def succ(msg):
+	if extraout == False or noout == True:
+		return
 	print("SUCCESS: " + msg)
 def readMessages(file = "messages.mMR"):
 	out = ""
